@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+
+    <body>
+        
+        <form id="optionFormTheme">
+            
+            <p>
+                <b>Firefox Themes : </b>
+                <br>Firefox integreted themes are hidden from webextensions (bug 1386004/1414512).
+                <br>If you are using one of the 3 defaults integrated themes, please select the used one.
+                <br>This setting purpose is not to change your theme but to let the extension know <b>what theme is used.</b>
+                <br>Most of other themes are handled automatically but because of (bug 1386004/1414512) themes
+                <br>using old api are not supported, and theme downloading images are not supported too. 
+                <br>This setting is used to restore the used theme after displaying the red bar for an http url.
+                <br>Also this settings is ignored when using a compatible theme.
+            </p>
+            
+            <input type="radio" id="optionThemeDefault" name="optionTheme" value="optionThemeDefault"/>
+            <label for="optionThemeDefault">Firefox Default</label><br>
+
+            <input type="radio" id="optionThemeLight" name="optionTheme" value="optionThemeLight"/>
+            <label for="optionThemeLight">Firefox Light</label><br>
+
+            <input type="radio" id="optionThemeDark" name="optionTheme" value="optionThemeDark"/>
+            <label for="optionThemeDark">Firefox Dark</label><br>
+            
+            <input type="radio" id="optionThemeOther" name="optionTheme" value="optionThemeOther"/>
+            <label for="optionThemeOther">Other Theme</label><br>
+            
+            <p>
+                <br>
+                <b>Red Color Warning : </b>
+                <br>Turn the whole browser red on http sites or just the url bar.
+                <br>For unsupported themes <b>unexpected</b> color behaviour may occur
+                <br>because used theme colors are not be accessible (bug 1386004/1414512).
+            </p>
+            
+            <input type="radio" id="optionFormFullFalse" name="optionThemeFull" value="optionFormFullFalse"/>
+            <label for="optionFormFullFalse">Apply red color to the url bar only</label><br>
+            
+            <input type="radio" id="optionFormFullTrue" name="optionThemeFull" value="optionFormFullTrue"/>
+            <label for="optionFormFullTrue">Apply red color to the whole browser</label><br>
+            
+            <p>
+                <br>
+                <b>Supported Themes : </b>
+                <br>  - Default firefox integrated themes through settings above
+                <br>  - All themes using new theming system (like <a href="https://addons.mozilla.org/en-US/firefox/addon/arc-dark-theme-we/" target="_blank">Ark-Dark</a>/<a href="https://addons.mozilla.org/en-US/firefox/addon/arc-theme-we/" target="_blank">Ark-Theme</a>)
+                <br>  - <a href="https://color.firefox.com" target="_blank">Firefox Color</a> (Firefox Test Pilot)
+            </p>
+
+            <p>
+                <br>
+                <b>Supported Extensions : </b>
+                <br>All theming extensions using new theming system like :
+                <br>- <a href="https://addons.mozilla.org/en-US/firefox/addon/firefox-color-prod/" target="_blank">Firefox Color</a> (Firefox Test Pilot)
+                <br>- <a href="https://addons.mozilla.org/en-US/firefox/addon/quantumedge/" target="_blank">QuantumEdge Dark</a>
+                <br>- <a href="https://addons.mozilla.org/en-US/firefox/addon/breeze-dark-theme/" target="_blank">Breeze Dark</a>
+                <br>- etc.
+            </p>
+            
+            <p>
+                <b>UnSupported Themes : </b>
+                <br>  - Connected themes (that download images and backgrounds)
+                <br>  - Themes set throught "lightweightThemes.usedThemes"
+                <br>  - Themes using old theming system
+            </p>
+            
+            <p>
+                <b>Do you like it ? : </b>
+                <br>You can offer me a coffee :)
+            </p>
+            
+            <p align="right">
+                <br>
+                <button style="height:28px;width:200px;text-align:center;" type="submit">  Save  </button>
+            </p>
+            
+        </form>
+        
+        <form id="optionFormTheme" method="post" action="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=intika.dev@gmail.com&lc=US&item_name=Donation+To+Librefox&currency_code=USD" target="_blank">
+            <p align="right">
+                <input style="height:28px;width:200px;text-align:center;" type="submit" value="Paypal Donation" />
+            </p>
+        </form>
+        
+        <!-- Script needs to be last -->
+        <script src="options.js"></script> 
+        
+    </body>
+</html>
