@@ -339,6 +339,10 @@ async function getStyle(themeInfo)
             
             if (platformOS == "android") {
                 //Handled as full red
+                //For android i need to implement a floating icon with this api
+                //https://codepen.io/androidcss/pen/yOopGp
+                //https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS
+                //https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript
                 optionFormTheme = "errorLoading";
             }
             
@@ -457,3 +461,4 @@ async function handleWindowFocusChange(windowId) {
 browser.tabs.onUpdated.addListener(handleUpdated); 
 //browser.tabs.onActivated.addListener(handleActivated); // not needed ? solved with "await getCurrentThemeInfo();" ?
 //browser.windows.onFocusChanged.addListener(handleWindowFocusChange); // not needed ? solved with "await getCurrentThemeInfo();" ?
+

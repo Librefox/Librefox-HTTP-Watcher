@@ -3,7 +3,7 @@
 
 	"name": "Librefox HTTP Watcher - Red flag",
 	"description": "Extension that makes the whole urlbar red when browsing an http site. this is based on http-says-insecure",
-	"version": "2.1",
+	"version": "2.2",
 
     "background": {
         "scripts": ["background.js"]
